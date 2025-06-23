@@ -1,0 +1,467 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 40px 0px 20px 0px;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top right , #2d2237, #160a1d, #020203);
+}
+
+
+
+
+
+nav {
+  position: fixed;          left: 0;
+  right: 0;
+  z-index: 1000;              
+  background-color: rgba(26, 3, 34, 0.7);
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius:  50px 50px; 
+  height: 80px;
+  margin: 0 auto;
+  max-width: calc(100% - 180px); }
+
+nav img {
+  height: 60px;
+  border-radius: 50%; /*Makes it circular */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #5a4b8b;
+  transform: scale(1.5);
+}
+.container {
+  padding: 10rem 2rem;
+  max-width: 890px;
+  margin: auto;
+}
+
+
+.hello , .name , .tagline{
+  font-size: 2rem;
+  color: #ccc;
+  margin-bottom: 0.5rem;
+  font-family: monospace;
+  transition: color 0.3s, transform 0.3s;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.hello:hover, .name:hover , .tagline:hover {
+  color: #a78bfa; /* or any color you like */
+  animation: bounce 0.6s ease;
+}
+
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  30%  { transform: translateY(-12px); }
+  50%  { transform: translateY(0); }
+  70%  { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+.name {
+  font-size: 5rem;
+  font-weight: bold;
+  background: linear-gradient(to right, #60a5fa, #c084fc);
+   -webkit-background-clip: text; /* For Chrome, Safari */
+  background-clip: text;         /* Standard property */
+  -webkit-text-fill-color: transparent; /* Required for gradient text */
+  color: transparent;  
+  margin: 0;
+}
+
+.tagline {
+  font-size: 4.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  color: #f3f4f6;
+}
+
+.intro,
+.values {
+  font-size: 1rem;
+  color: #ddd;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+.cta {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.talk-btn {
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(to right, #a78bfa, #60a5fa);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(96, 165, 250, 0.3);
+  transition: all 0.3s ease;
+}
+
+.talk-btn:hover {
+  transform: scale(1.05);
+}
+
+.gear {
+  font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+/* === ABOUT SECTION === */
+.about {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: auto;
+  
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.about-text {
+  flex: 1 1 60%;
+  color: #ddd;
+}
+
+.about-heading {
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: #b0fff6;
+}
+
+.about-heading .tag {
+  color: #64ffda;
+}
+
+.about-heading .highlight {
+  color: #ccc;
+}
+
+.about-heading .line-dot {
+  flex-grow: 1;
+  height: 1px;
+  background: #ccc;
+  margin-left: 1rem;
+  position: relative; 
+} 
+
+
+
+
+.about-text p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #7b61ff, #8b5cf6);
+  border: none;
+  border-radius: 50%;
+  padding: 15px;
+  cursor: pointer;
+  transition: transform 0.3s;
+  margin-top: 1rem;
+}
+
+.download-btn:hover {
+  transform: scale(1.1);
+}
+
+.download-btn .icon {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.about-image {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* === SKILLS SECTION === */
+.skills{
+  padding: 4rem 21rem 7rem 21rem;
+}
+/* Skill Section Container */
+.skills-container {
+  max-width: 1100px;
+  color: #fff;
+  margin: auto;
+}
+.skills-heading{
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: #b0fff6;
+}
+/* Heading and line in one line */
+.skills-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  margin-bottom: 2rem;
+  
+}
+.skills-heading .line-dot {
+  width: 300px;         
+  height: 2px;          
+  background-color: #888;
+  margin: 20px 0 20px 14px; 
+}
+
+
+.frontend-dev-heading {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  color: #ccc;
+  text-decoration: solid;
+  text-align: center;
+}
+.tech-stack-wrapper {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.tech-stack-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+.tech-stack-logo {
+  width: 140px;
+  height: auto;
+  transition: transform 0.3s;
+}
+
+.tech-stack-logo:hover {
+  transform: scale(1.2);
+}
+
+.tooltip {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+ /* === Projects Section === */
+.Projects{
+  padding: 4rem 21rem 7rem 21rem;
+}
+
+.Projects-container {
+  max-width: 1100px;
+  color: #fff;
+}
+
+.Projects-heading{
+  font-family: monospace;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: #b0fff6;
+}
+.Projects-heading-row {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+  margin-bottom: 2rem;
+  
+}
+.Projects-heading .line-dot {
+  width: 300px;         
+  height: 2px;          
+  background-color: #888;
+  margin: 20px 0 20px 14px; 
+}
+.card{
+  display: flex;
+  flex-direction: row;
+  margin:2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  background-color: #221f30;
+  width: 700px;
+  height: 300px;
+  justify-content: space-between;
+  gap: 3rem;
+  position: relative;
+}
+.card h1{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  text-decoration: solid;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.card p{
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #7c7a7a;
+  text-decoration: solid;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.card span{
+  font-size: 0.9rem;
+  color: #63aceb;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin-bottom: 60px;
+  
+}
+.card a{
+  text-decoration: none;
+}
+.card .text-content{
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+}
+
+.card span:hover{
+  background: linear-gradient(to right, #a78bfa, #60a5fa);;
+  color: #000000; 
+  border-radius: 50px 50px;
+  padding: 10px 20px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.card img{
+  width: 300px;
+  height: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 80px;
+  left: 55%;
+}
+
+.footer-bottom {
+    background: linear-gradient( to top  ,#291e33,#160a1d, #020203 );
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    color: #fff;
+  }
+
+.logos{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem
+  
+}
+.logos-container{
+  width: 50px;
+  height: 50px;
+}
+
+
+.bottom-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+.bottom-container span {
+  background: linear-gradient(to right, #a78bfa, #60a5fa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; /* For Safari/Chrome */
+}
+.footer-end{
+  color: #7c7a7a;
+  text-decoration: solid;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+/* === RESPONSIVE ADJUSTMENT === */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text, .about-image {
+    flex: 1 1 100%;
+  }
+
+  .about-image {
+    margin-top: 2rem;
+  }
+}
