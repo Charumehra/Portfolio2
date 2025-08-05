@@ -5,6 +5,12 @@
   "hints": {
     "axe/name-role-value": "off",
     "no-inline-styles": "off",
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ]
   }
 }
