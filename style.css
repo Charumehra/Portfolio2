@@ -334,7 +334,7 @@ nav img {
 }
 
 /* ===== Skills Section ===== */
-.skills {
+ .skills {
   padding: 2rem 2rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
@@ -392,7 +392,8 @@ nav img {
   margin-top: 0.5rem;
   font-size: 0.9rem;
   color: #aaa;
-}
+} 
+
 
 /* ===== Projects Section ===== */
 .Projects {
@@ -427,8 +428,21 @@ nav img {
   border-radius: 12px;
   background: #221f30;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-  
+   opacity: 0;
+  transition: all 0.8s ease;
 }
+.card:nth-child(odd) {
+  transform: translateX(-80px);
+}
+
+.card:nth-child(even) {
+  transform: translateX(80px);
+}
+.card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
 .card img {
   width: 300px;
@@ -523,7 +537,6 @@ nav img {
   height: 50px;
   object-fit: contain;
 }
-
 /* ===== Responsive ===== */
 @media (min-width: 769px) {
   #nav-links {
