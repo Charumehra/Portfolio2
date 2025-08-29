@@ -8,7 +8,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top right, #2d2237, #160a1d, #020203);
+ background: radial-gradient(circle at top right, #2d2237, #160a1d, #020203); 
   color: #ddd;
 }
 
@@ -16,6 +16,22 @@ html {
   scroll-behavior: smooth;
    overflow-x: hidden;
 }
+
+/* Zoom-out animation */
+.zoom-out {
+  transform: scale(1.12);
+  opacity: 0;
+  transition: transform 900ms cubic-bezier(.2,.8,.2,1), opacity 700ms ease;
+  will-change: transform, opacity;
+  transform-origin: center center;
+}
+
+/* Visible state (when scrolled into view) */
+.zoom-out.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
 
 
 /* ===== Navbar ===== */
@@ -430,7 +446,10 @@ nav img {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
    opacity: 0;
   transition: all 0.8s ease;
+  
+   
 }
+
 .card:nth-child(odd) {
   transform: translateX(-80px);
 }

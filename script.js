@@ -57,4 +57,29 @@ const cards = document.querySelectorAll(".card");
   
 
 
-  
+document.addEventListener('DOMContentLoaded', () => {
+  const targets = document.querySelectorAll('.zoom-out');
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          
+          obs.unobserve(entry.target);
+        } else {
+        
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '0px 0px -10% 0px', 
+      threshold: 0.12
+    });
+
+    targets.forEach(el => observer.observe(el));
+  } else {
+    
+    targets.forEach(el => el.classList.add('visible'));
+  }
+});
